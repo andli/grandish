@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  grandish-server:
+    build: ./server
+    volumes:
+      - ./server:/usr/src/app
+    ports:
+      - 5000:5000
+  
+  grandish-client:
+    build: ./client
+    volumes:
+      - ./client:/dsfsdfds
+    ports:
+      - 8080:8080
+    depends_on:
+      - grandish-server

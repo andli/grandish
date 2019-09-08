@@ -1,0 +1,7 @@
+PyJWT
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Script
+flask-cors
+requests
