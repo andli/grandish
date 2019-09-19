@@ -1,18 +1,20 @@
 version: '3'
 
 services:
-  grandish-server:
+  server:
     build: ./server
     volumes:
       - ./server:/usr/src/app
     ports:
       - 5000:5000
   
-  grandish-client:
+  client:
     build: ./client
     volumes:
-      - ./client:/dsfsdfds
+      - ./client/public:/app/public
+      - ./client/src:/app/src
+      - ./client/babel.config.js:/app/babel.config.js
     ports:
       - 8080:8080
     depends_on:
-      - grandish-server
+      - server
